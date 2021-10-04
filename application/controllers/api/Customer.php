@@ -27,7 +27,7 @@ class Customer extends REST_Controller {
 
      if($customer)
      {
-         $customer['cust_code'] = str_replace(' ', '', ($customer['first_name'].$customer['last_name'].$customer['date_of_birth']));
+         $customer['cust_code'] = strtolower(str_replace(' ', '', ($customer['first_name'].$customer['last_name'].$customer['date_of_birth'])));
 
          $affectedRows = $this->Customer_model->addData($customer);
 
