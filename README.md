@@ -9,6 +9,38 @@
 **NOTE**
 - This is Open API without Basic Authentication or OAuth2  
 
+**DATABASE NAME**
+ - db_examination
+
+
+ 
+ **Run the following scripts to create table**
+ 
+- CREATE TABLE `tbl_customer` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `date_of_birth` date NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `cust_code` varchar(100) NOT NULL,
+  `phone_number` varchar(20) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `date_created` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+- ALTER TABLE `tbl_customer`
+  ADD PRIMARY KEY (`id`);
+
+- ALTER TABLE `tbl_customer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+
+
+
+
+
 **BASIC FUNCTIONS**
 - ADDING OF CUSTOMERS
 - LISTING OF CUSTOMERS
