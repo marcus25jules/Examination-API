@@ -37,5 +37,36 @@
     }
 }
      
+**LISTING OF CUSTOMERS**
+- **URL**: http://samplehost/api/customer
+- **METHOD**: GET
+- **PARAMS**: N/A
+- **RETURN**
+- 	[
+    {
+        "id": "1",
+        "user_id": "1",
+        "first_name": "Mark",
+        "last_name": "Bayona",
+        "date_of_birth": "2015-07-15",
+        "email": "markanthony@email.com",
+        "cust_code": "markbayona2015-07-15",
+        "phone_number": "",
+        "address": "dasdasdsd",
+        "date_created": "2021-10-04 11:12:51"
+    },
+    {
+        "id": "2",
+        "user_id": "0",
+        "first_name": "Joy",
+        "last_name": "Dimapilis",
+        "date_of_birth": "1991-05-05",
+        "email": "joy@yahoo.com",
+        "cust_code": "joydimapilis1991-05-05",
+        "phone_number": "1234567890",
+        "address": "San Matheo Rizal",
+        "date_created": "2021-10-04 06:37:00"
+    },
+}  
   
 
