@@ -1,0 +1,26 @@
+RewriteEngine On
+
+
+<IfModule mod_headers.c>
+        <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|svg|svgz|jpg|png|ico|font.css|css|js)$">
+            ## un-remark this one for all access and remark out the one below it
+            #Header set Access-Control-Allow-Origin "*"
+            ## Change this to your local host url. and https or http
+            Header add Access-Control-Allow-Origin: "http://localhost:4200"
+            Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+            Header add Access-Control-Allow-Headers: "origin, x-api-key, x-requested-with, content-type, accept, access-control-request-method, access-control-allow-headers, authorization, observe, enctype, content-length, x-csrf-token"
+            Header add Access-Control-Allow-Credentials true
+        </FilesMatch>
+</IfModule>
+
+# Put your installation directory here:
+# If your URL is www.example.com/, use /
+# If your URL is www.example.com/site_folder/, use /site_folder/
+
+# Do not enable rewriting for files or directories that exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# For reuests that are not actual files or directories,
+# Rewrite to index.php/URL
+RewriteRule (.+) index.php?p=$1 [QSA,L]
